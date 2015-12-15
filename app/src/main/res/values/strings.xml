@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">CurrentGame</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_show_current_game">ShowCurrentGame</string>
+    <string name="changeButton">Change User</string>
+    <string name="loginButton">Login</string>
+    <string name="title_activity_add_user">AddUser</string>
+    <string name="addButton">Add</string>
+    <string name="regionTextField">region</string>
+    <string name="loginTextField">login name</string>
+    <string name="loginEditText">login name</string>
+    <string name="regionEditText">region</string>
+    <string name="buttonApply">Apply</string>
+    <string name="userlistSummonername">Summoner name</string>
+    <string name="userSummon">Summoner name</string>
+    <string name="userLoginname">Login name</string>
+    <string name="userSummonerLevel">30</string>
+    <string name="userSummonID">ID</string>
+    <string name="userSummonLevel">99</string>
+    <string name="cgChamp">cgChamp</string>
+    <string name="cgChampName">cgChampName</string>
+    <string name="cgRank">cgRank</string>
+    <string name="cgPlayer">cgPlayer</string>
+    <string name="cgPlayerId">cgPlayerId</string>
+    <string name="title_activity_download">Download</string>
+</resources>
