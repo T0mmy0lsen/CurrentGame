@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".LoginScreen"
+            android:name=".ActivityLoginScreen"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -21,12 +21,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ShowCurrentGame"
+            android:name=".ActivityShowCurrentGame"
             android:label="@string/title_activity_show_current_game"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Download"
+            android:name=".ActivityDownload"
             android:label="@string/title_activity_download"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ActivityHeadtoHead"
+            android:label="@string/title_activity_activity_headto_head"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

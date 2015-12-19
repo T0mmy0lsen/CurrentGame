@@ -8,23 +8,14 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:id="@+id/imageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/cgChampId"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
-            android:layout_margin="5dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="cgChampId"
-            android:id="@+id/cgChampId"
-            android:layout_marginEnd="13dp"
-            android:layout_above="@+id/cgSpell1"
-            android:layout_alignEnd="@+id/imageView"
-            android:layout_marginBottom="11dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -32,8 +23,10 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/cgChampName"
             android:id="@+id/cgChampName"
-            android:layout_above="@+id/cgPlayer"
-            android:layout_toEndOf="@+id/cgChampId" />
+            android:layout_alignTop="@+id/cgChampId"
+            android:layout_toEndOf="@+id/cgChampId"
+            android:layout_marginLeft="2dp"
+            android:layout_marginBottom="2dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -41,27 +34,9 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="@string/cgPlayer"
             android:id="@+id/cgPlayer"
-            android:layout_alignBaseline="@+id/cgChampId"
-            android:layout_alignBottom="@+id/cgChampId"
-            android:layout_toEndOf="@+id/cgChampId" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="spell1"
-            android:id="@+id/cgSpell1"
-            android:layout_above="@+id/cgSpell2"
-            android:layout_alignStart="@+id/cgSpell2" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="spell2"
-            android:id="@+id/cgSpell2"
-            android:layout_alignBottom="@+id/imageView"
-            android:layout_toEndOf="@+id/cgChampId" />
+            android:layout_below="@+id/cgChampName"
+            android:layout_toEndOf="@+id/cgChampId"
+            android:layout_margin="2dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -71,5 +46,21 @@
             android:id="@+id/cgPlayerId"
             android:layout_below="@+id/cgChampName"
             android:layout_alignParentEnd="true" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/cgSpell11"
+            android:layout_below="@+id/cgPlayer"
+            android:layout_toEndOf="@+id/cgChampId"
+            android:layout_marginLeft="2dp" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/cgSpell22"
+            android:longClickable="false"
+            android:layout_below="@+id/cgPlayer"
+            android:layout_toEndOf="@+id/cgSpell11" />
     </RelativeLayout>
 </LinearLayout>

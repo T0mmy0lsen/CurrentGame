@@ -11,16 +11,16 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-public class APIgetCurrentGame extends AsyncTask<String, String, List<Participants>> {
+public class APIgetCurrentGame extends AsyncTask<String, String, List<ObjectParticipants>> {
 
-    List<Participants> participantslist = new ArrayList<>();
+    List<ObjectParticipants> participantslist = new ArrayList<>();
     JSONObject jsonRootObject = new JSONObject();
     JSONArray jsonArray = new JSONArray();
     JSONObject jsonObject = new JSONObject();
     StringBuilder jsonStringBuilder = new StringBuilder();
     String jsonLine;
 
-    protected List<Participants> doInBackground(String...urls) {
+    protected List<ObjectParticipants> doInBackground(String...urls) {
         try {
             URL url = new URL(urls[0]);
             HttpURLConnection urlC = (HttpURLConnection) url.openConnection();
@@ -39,7 +39,7 @@ public class APIgetCurrentGame extends AsyncTask<String, String, List<Participan
                 int piconId = jsonObject.optInt("profileIconId");
                 int sId = jsonObject.optInt("summonerId");
                 String sName = jsonObject.optString("summonerName");
-                participantslist.add(new Participants(spell1,spell2,chId,piconId,sId,sName));
+                participantslist.add(new ObjectParticipants(spell1,spell2,chId,piconId,sId,sName));
             }
         } catch (Exception e) {
             return participantslist;
@@ -50,7 +50,7 @@ public class APIgetCurrentGame extends AsyncTask<String, String, List<Participan
     public AsyncResponseCG delegate = null;
 
     @Override
-    protected void onPostExecute(List<Participants> result) {
+    protected void onPostExecute(List<ObjectParticipants> result) {
         delegate.processFinish(result);
     }
 }

@@ -23,4 +23,5 @@
     <string name="cgPlayer">cgPlayer</string>
     <string name="cgPlayerId">cgPlayerId</string>
     <string name="title_activity_download">Download</string>
+    <string name="title_activity_activity_headto_head">ActivityHeadtoHead</string>
 </resources>

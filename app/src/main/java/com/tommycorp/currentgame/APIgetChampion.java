@@ -13,9 +13,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class APIgetChampion extends AsyncTask<String, String, List<Champion>> {
+public class APIgetChampion extends AsyncTask<String, String, List<ObjectChampion>> {
 
-    List<Champion> championlist = new ArrayList<>();
+    List<ObjectChampion> championlist = new ArrayList<>();
     JSONObject jsonRootObject = new JSONObject();
     JSONArray jsonArray = new JSONArray();
     JSONObject jsonObject = new JSONObject();
@@ -23,7 +23,7 @@ public class APIgetChampion extends AsyncTask<String, String, List<Champion>> {
     StringBuilder jsonStringBuilder = new StringBuilder();
     String jsonLine;
 
-    protected List<Champion> doInBackground(String...urls) {
+    protected List<ObjectChampion> doInBackground(String...urls) {
         try {
             URL url = new URL(urls[0]);
             HttpURLConnection urlC = (HttpURLConnection) url.openConnection();
@@ -39,7 +39,7 @@ public class APIgetChampion extends AsyncTask<String, String, List<Champion>> {
                 String name = keys.next();
                 tempObject = jsonObject.optJSONObject(name);
                 int id = tempObject.getInt("id");
-                championlist.add(new Champion(id,name));
+                championlist.add(new ObjectChampion(id,name));
             }
 
         } catch (Exception e) {
@@ -51,7 +51,7 @@ public class APIgetChampion extends AsyncTask<String, String, List<Champion>> {
     public AsyncResponseChamp delegate = null;
 
     @Override
-    protected void onPostExecute(List<Champion> result) {
+    protected void onPostExecute(List<ObjectChampion> result) {
         delegate.processFinish(result);
     }
 }
